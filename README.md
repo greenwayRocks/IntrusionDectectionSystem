@@ -13,7 +13,8 @@
 ```
 
 
-    Spam Filtering using the library, some email data (spams + hams) that are used to train the system.
+    Inside spam_emails_data, we have spams and hams, that are supposed to train the system.
+    The data returned seems really fine.
 
 ![spam_filter](https://github.com/greenwayRocks/IntrusionDetectionSystem/blob/master/screen/spam_filter.png)
 
@@ -22,11 +23,6 @@
 <hr>
 **:: Visit **
 :: [Explore](https://github.com/greenwayRocks/vim-wiki/blob/main/explore.md)
-:: [Discovery](https://github.com/greenwayRocks/vim-wiki/blob/main/discovery.md)
-:: [ToDo](https://github.com/greenwayRocks/vim-wiki/blob/main/todo.md)
-
-**:: Docs **
-:: [svelte](https://github.com/greenwayRocks/vim-wiki/blob/main/docs/svelte/00.md)
 
 <hr>
 
