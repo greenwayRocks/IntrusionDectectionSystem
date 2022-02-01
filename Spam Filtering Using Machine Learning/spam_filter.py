@@ -42,5 +42,6 @@ nlp_followed_by_dt.fit(X_train, y_train)
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 y_test_pred = nlp_followed_by_dt.predict(X_test)
+
 print(accuracy_score(y_test, y_test_pred))
 print(confusion_matrix(y_test, y_test_pred))

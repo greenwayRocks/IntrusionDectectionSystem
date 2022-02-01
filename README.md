@@ -10,15 +10,15 @@
 # implemented using scikit-learn library
 # pip install scikit-learn
 # python **/spam_filter.py
+# use jupyter notebook too! (that .ipynb file)
 ```
 
-
     Inside spam_emails_data, we have spams and hams, that are supposed to train the system.
-    The data returned seems really fine.
+    The returned results seem good.
 
 ![spam_filter](https://github.com/greenwayRocks/IntrusionDetectionSystem/blob/master/screen/spam_filter.png)
 
-**Note** -- Does this not require some frontend for good implementation? Sure does. Working on it!
+**Note** -- Does this not require some frontend for good implementation? Sure does. Working on our Django App!
 
 <hr>
 **:: Visit **
