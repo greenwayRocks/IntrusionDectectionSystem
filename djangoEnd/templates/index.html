@@ -119,12 +119,9 @@
       </h2>
       <div class="w3-container">
         <h5 class="w3-opacity">
-          <b>Front End Developer / w3schools.com</b>
+          <b>Spam or Ham? Let's find out!</b>
         </h5>
-        <h6 class="w3-text-teal">
-          <i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 -
-          <span class="w3-tag w3-teal w3-round">Current</span>
-        </h6>
+
         <form method="POST" class="uniForm">
           {% csrf_token %} {{ form|crispy }}
           <input
@@ -133,14 +130,16 @@
             value="Check for spam"
           />
         </form>
-        <p>{{ prediction }}</p>
+        <h6 class="w3-text-teal">
+          <i class="fa fa-calendar fa-fw w3-margin-right"></i>{{ prediction }}
+          <span class="w3-tag w3-teal w3-round">Current</span>
+        </h6>
         <hr />
       </div>
       <div class="w3-container">
         <h5 class="w3-opacity"><b>Tshark Packet Capture Live? Yass!</b></h5>
         <h6 class="w3-text-teal">
-          <i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec
-          2014
+          <i class="fa fa-calendar fa-fw w3-margin-right"></i>{{ packet_info }}
         </h6>
         <p>{{ packet_info }}</p>
         <hr />

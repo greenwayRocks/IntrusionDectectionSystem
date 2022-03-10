@@ -49,6 +49,10 @@ joblib.dump(model, 'spam_model')
 # load saved model
 newModel = joblib.load('spam_model')
 print(X_test)
+with open('mails.txt', 'w') as ml:
+    for mail in X_test:
+        ml.write(mail)
+        ml.write('\n')
 y_test_pred = newModel.predict(X_test)
 
 # accuracy and matrix

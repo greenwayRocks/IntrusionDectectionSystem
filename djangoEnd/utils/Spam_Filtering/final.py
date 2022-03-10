@@ -1,10 +1,16 @@
 import email
+import time
 import imaplib
 
-def get_email():
+mails = []
+
+def get_email(n):
     EMAIL = 'satishadhikari.075@kathford.edu.np'
     PASSWORD = 'hahahehehoHO71!'
     SERVER = 'imap.gmail.com'
+
+    mails = []
+    i = 1
 
     # connect to the server and go to its inbox
     mail = imaplib.IMAP4_SSL(SERVER)
@@ -76,31 +82,17 @@ def get_email():
                 # print(f'From: {mail_from}')
                 # print(f'Subject: {mail_subject}')
                 # print(f'Content: {mail_content}')
-                return mail_content
+                # return mail_content
+                mails.append(mail_content)
+                new_i = int(i.decode('utf-8'))
 
+                if new_i >= n:
+                    return mails
+                else:
+                    new_i = new_i + 1
+                    continue
 
-from string import punctuation
-import re
+# Try it out!
+my_mails = get_email(5)
+print(my_mails)
 
-def clean_email(email):
-    """ Remove all punctuation, urls, numbers, and newlines.
-    Convert to lower case.
-    Args:
-        email (unicode): the email
-    Returns:
-        email (unicode): only the text of the email
-    """
-
-    email = re.sub(r'http\S+', ' ', email)
-    email = re.sub("\d+", " ", email)
-    email = email.replace('\n', ' ')
-    email = email.translate(str.maketrans("", "", punctuation))
-    email = email.lower()
-    return email
-
-my_mail = get_email()
-print(f'[Prev] :: {my_mail}')
-
-new_mail = clean_email(my_mail)
-
-print(f'[Next] :: {new_mail}')
